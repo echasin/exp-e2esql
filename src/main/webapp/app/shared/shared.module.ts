@@ -12,10 +12,4 @@ import { SqltestSharedLibsModule, SqltestSharedCommonModule, JhiLoginModalCompon
     exports: [SqltestSharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class SqltestSharedModule {
-    static forRoot() {
-        return {
-            ngModule: SqltestSharedModule
-        };
-    }
-}
+export class SqltestSharedModule {}

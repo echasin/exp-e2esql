@@ -1,11 +1,11 @@
 # sqltest
-This application was generated using JHipster 5.7.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.7.0](https://www.jhipster.tech/documentation-archive/v5.7.0).
+This application was generated using JHipster 5.6.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.6.0](https://www.jhipster.tech/documentation-archive/v5.6.0).
 
 ## Development
 
 To start your application in the dev profile, simply run:
 
-    
+    ./gradlew
 
 
 For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
@@ -29,9 +29,11 @@ will generate few files:
 
 To optimize the sqltest application for production, run:
 
+    ./gradlew -Pprod clean bootWar
 
 To ensure everything worked, run:
 
+    java -jar build/libs/*.war
 
 
 Refer to [Using JHipster in production][] for more details.
@@ -69,18 +71,18 @@ For more information, refer to the [Code quality page][].
 
 You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
 
-For example, to start a  database in a docker container, run:
+For example, to start a oracle database in a docker container, run:
 
-    docker-compose -f src/main/docker/.yml up -d
+    docker-compose -f src/main/docker/oracle.yml up -d
 
 To stop it and remove the container, run:
 
-    docker-compose -f src/main/docker/.yml down
+    docker-compose -f src/main/docker/oracle.yml down
 
 You can also fully dockerize your application and all the services that it depends on.
 To achieve this, first build a docker image of your app by running:
 
-    
+    ./gradlew bootWar -Pprod jibDockerBuild
 
 Then run:
 
@@ -93,13 +95,13 @@ For more information refer to [Using Docker and Docker-Compose][], this page als
 To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
 
 [JHipster Homepage and latest documentation]: https://www.jhipster.tech
-[JHipster 5.7.0 archive]: https://www.jhipster.tech/documentation-archive/v5.7.0
+[JHipster 5.6.0 archive]: https://www.jhipster.tech/documentation-archive/v5.6.0
 
-[Using JHipster in development]: https://www.jhipster.tech/documentation-archive/v5.7.0/development/
-[Using Docker and Docker-Compose]: https://www.jhipster.tech/documentation-archive/v5.7.0/docker-compose
-[Using JHipster in production]: https://www.jhipster.tech/documentation-archive/v5.7.0/production/
-[Running tests page]: https://www.jhipster.tech/documentation-archive/v5.7.0/running-tests/
-[Code quality page]: https://www.jhipster.tech/documentation-archive/v5.7.0/code-quality/
-[Setting up Continuous Integration]: https://www.jhipster.tech/documentation-archive/v5.7.0/setting-up-ci/
+[Using JHipster in development]: https://www.jhipster.tech/documentation-archive/v5.6.0/development/
+[Using Docker and Docker-Compose]: https://www.jhipster.tech/documentation-archive/v5.6.0/docker-compose
+[Using JHipster in production]: https://www.jhipster.tech/documentation-archive/v5.6.0/production/
+[Running tests page]: https://www.jhipster.tech/documentation-archive/v5.6.0/running-tests/
+[Code quality page]: https://www.jhipster.tech/documentation-archive/v5.6.0/code-quality/
+[Setting up Continuous Integration]: https://www.jhipster.tech/documentation-archive/v5.6.0/setting-up-ci/
 
 [Gatling]: http://gatling.io/
