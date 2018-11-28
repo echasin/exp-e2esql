@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name_last",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "name_first",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20181128052000",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "person",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}
